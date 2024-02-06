@@ -20,7 +20,7 @@ fun Application.module() {
     val mongoPw = System.getenv("MONGO_PW")
     val dbName = "ktor-auth"
     val db = KMongo.createClient(
-        connectionString = "mongodb+srv://p hilipplackner:$mongoPw@cluster0.mvi9z.mongodb.net/$dbName?retryWrites=true&w=majority"
+        connectionString = "mongodb+srv://philipplackner:$mongoPw@cluster0.mvi9z.mongodb.net/$dbName?retryWrites=true&w=majority"
     ).coroutine
         .getDatabase(dbName)
     val userDataSource = MongoUserDataSource(db)
